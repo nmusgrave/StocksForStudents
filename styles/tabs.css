@@ -1,0 +1,38 @@
+.dynamicTabs .remove-tab {
+  margin-bottom: 40px; }
+.dynamicTabs .md-button {
+  display: block; }
+.dynamicTabs .main-tab {
+  height: 100vh;
+  text-align: center;
+  background-color: #bbdefb; }
+.dynamicTabs .md-header {
+  background-color: #1976D2 !important; }
+.dynamicTabs md-tab {
+  color: #90caf9 !important; }
+.dynamicTabs md-tab.active, .dynamicTabs md-tab:focus {
+  color: white !important; }
+.dynamicTabs md-tab[disabled] {
+  opacity: 0.5; }
+.dynamicTabs .md-header .md-ripple {
+  border-color: #FFFF8D !important; }
+.dynamicTabs md-tabs-ink-bar {
+  background-color: #FFFF8D !important; }
+.dynamicTabs .title {
+  padding-top: 8px;
+  padding-right: 8px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 24px; }
+.dynamicTabs [layout-align] > * {
+  margin-left: 8px; }
+.dynamicTabs form > [layout] > * {
+  margin-left: 8px; }
+.dynamicTabs .long > input {
+  width: 264px; }
+.dynamicTabs .md-button {
+  max-height: 30px; }
+.dynamicTabs .md-button.add-tab {
+  margin-top: 20px;
+  max-height: 30px !important; }

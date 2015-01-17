@@ -1,18 +1,15 @@
-var seedApp = angular.module('seedApp', ['ngRoute', 'chart.js', 'ngMaterial']);
+var stocksApp = angular.module('stocksApp', ['ngRoute', 'chart.js', 'ngMaterial', ]);
 
 // configure routes
-seedApp.config(function($routeProvider) {
+stocksApp
+.config(function($routeProvider) {
   $routeProvider
 
     // route for the home page
+    /* ROUTES NOT BEING USED
     .when('/', {
             templateUrl : 'views/main.html',
             controller  : 'mainController'
     })
-
-    // route for the about page
-    .when('/about', {
-            templateUrl : 'views/about.html',
-            controller  : 'aboutController'
-    })
-});
+*/
+})

@@ -5,26 +5,34 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
 
-    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/tabs.css">
+
+    <!--POLYMER ELEMENTS-->
+    <link rel="import" href="polymer-custom/portfolio-element.html">
+    <link rel="import" href="polymer-custom/search-element.html">
 
   </head>
-  <body ng-app="seedApp">
-    
-    <div class="container">
-      <!-- header -->
-      <div id="header" ng-include="'views/header.html'"></div>
-
-      <!-- body -->
-      <div ng-view></div>
-      
-      <!-- footer -->
-      <div class="footer" id="footer" ng-include="'views/footer.html'"></div>
+  <body ng-app="stocksApp">
+    <div ng-controller="appCtrl" class="dynamicTabs">
+      <md-tabs>
+      <md-tab ng-disabled="tab.disabled" label="Portfolio">
+        <div class="main-tab portfolio-tab" layout="column" layout-fill layout-align="space-around center">
+          <portfolio-element></portfolio-element>
+          </div>
+        </md-tab>
+      <md-tab ng-disabled="tab.disabled" label="Search">
+        <div class="main-tab search-tab" layout="column" layout-fill layout-align="space-around center">
+          <search-element></search-element>
+          </div>
+        </md-tab>
+      </md-tabs>
     </div>
-    
+
      <!-- Supporting scripts -->
 
     <script src="/bower_components/angular/angular.js"></script>
@@ -39,13 +47,12 @@
 
 
     <script src="bower_components/chartjs/chart.js"></script>
-    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
 
     <script src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
 
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/MainCtrl.js"></script>
-    <script src="scripts/controllers/AboutCtrl.js"></script>
+    <script src="scripts/controllers/AppCtrl.js"></script>
+
 
 </body>
 </html>

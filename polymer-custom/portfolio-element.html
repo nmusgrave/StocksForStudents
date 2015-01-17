@@ -1,0 +1,38 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<script src="../bower_components/chartjs/Chart.js"></script>
+
+ 
+<polymer-element name="portfolio-element">
+  <template>
+
+    This is <b>{{name}}</b>'s name-tag element.
+
+    <canvas id="tables" class="chart chart-line ng-isolate-scope" data="data" labels="labels"
+ 		 colours="colours" height="261" width="523" style="width: 523px; height: 261px;">
+	</canvas>
+
+	<canvas id="myChart" width="400" height="400"></canvas>
+
+
+  </template>
+<script>
+	function createGraph(obj) {
+		// Get the context of the canvas element we want to select
+		var ctx = obj.$.getContext("2d");
+		var myNewChart = new Chart(ctx).PolarArea(data);
+
+	}
+    Polymer({
+      message: 'Everyone come and see how FREAKING AWESOME I look!',
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      series: ['Series A', 'Series B'],
+      data: [
+		[65, 59, 80, 81, 56, 55, 40],
+		[28, 48, 40, 19, 86, 27, 90]
+	  ],
+      ready: function() {
+        createGraph(this);
+      }
+    });
+</script>
+</polymer-element>
