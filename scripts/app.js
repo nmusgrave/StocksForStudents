@@ -1,4 +1,4 @@
-var seedApp = angular.module('seedApp', ['ngRoute']);
+var seedApp = angular.module('seedApp', ['ngRoute', 'chart.js', 'ngMaterial']);
 
 // configure routes
 seedApp.config(function($routeProvider) {
