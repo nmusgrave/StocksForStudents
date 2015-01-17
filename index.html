@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="seedApp">
+    
+    <div class="container">
+      <!-- header -->
+      <div id="header" ng-include="'views/header.html'"></div>
+
+      <!-- body -->
+      <div ng-view></div>
+      
+      <!-- footer -->
+      <div class="footer" id="footer" ng-include="'views/footer.html'"></div>
+    </div>
+    
+     <!-- Supporting scripts -->
+    <script src="scripts/vendor/angular.js"></script>
+    <script src="scripts/vendor/angular-route.js"></script>
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/MainCtrl.js"></script>
+    <script src="scripts/controllers/AboutCtrl.js"></script>
+
+</body>
+</html>
