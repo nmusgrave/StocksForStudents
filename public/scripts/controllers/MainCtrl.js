@@ -1,7 +1,9 @@
 // create the controller and inject Angular's $scope
-seedApp.controller('mainController', function($scope, $log) {
+seedApp.controller('mainController', function($scope, $log, algorithm) {
 	// create a message to display in our view
 	$scope.message = 'Everyone come and see how FREAKING AWESOME I look!';
+
+  algorithm.test();
 	
   $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
