@@ -1,9 +1,9 @@
-var seedApp = angular.module('seedApp', ['ngRoute', 'chart.js', 'ngMaterial']);
+var seedApp = angular.module('seedApp', ['ngRoute']);
 
 // configure routes
+
 seedApp.config(function($routeProvider) {
   $routeProvider
-
     // route for the home page
     .when('/', {
             templateUrl : 'views/main.html',
