@@ -6,3 +6,4 @@ client.key
 bloomberg.crt
 .DS_Store
 .brackets.json
+node_modules/
