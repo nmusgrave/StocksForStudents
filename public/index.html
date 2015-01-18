@@ -17,36 +17,99 @@
 
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/style.css">
-
-  </head>
-  <!-- POLYMBER -->
-<body unresolved>
-  <portfolio-element></portfolio-element>
-
-  
-
-</body>
-
-  <!-- ANGULAR
-  <body ng-app="seedApp">
-    <div class="">
-      <div id="header" ng-include="'views/header.html'"></div>
-
-      <div ng-view></div>
+    <link rel="stylesheet" href="styles/polymerStyle.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    
       
-      <div class="footer" id="footer" ng-include="'views/footer.html'"></div>
-    </div>
+      
+    </head>
+    
+    <body unresolved touch-action="auto">
+
 
     
-    <script src="scripts/vendor/midnight.jquery.min.js"></script>
-    <script src="scripts/vendor/angular.js"></script>
-    <script src="scripts/vendor/angular-route.js"></script>
-    <script src="scripts/vendor/jquery.js"></script>
-    <script src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/MainCtrl.js"></script>
-    <script src="scripts/controllers/AboutCtrl.js"></script>
-    <script src="scripts/controllers/AlgService.js"></script>
+
+    <div id="content">
+        
+    <style shim-shadowdom>
+        body{background-color:#D32F2F;}
+        .unselectable {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        .no-tap-color {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-touch-callout: none;
+        }
+
+        .mainBlock {
+            padding: 20px;
+        }
+
+        .centered-panel {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: left;
+        }
+    </style>
+
+    <section hero id="heading">
+
+        <h2 class = "" style="font-size:7em;">STACKED</h2>
+        <style shim-shadowdom>
+            #heading .mainBlock {
+                width: 22em;
+            }
+
+            #heading paper-input {
+                width: 100%;
+            }
+        </style>
+
+        <div class="mainBlock centered-panel">
+
+           <center> <h4 class="">Trade stocks in 7 seconds</h4></center>
+
+            <paper-input label="USERNAME..."></paper-input><br>
+
+            <paper-input floatingLabel label="EMAIL "></paper-input><br>
+
+            <br><br>
+
+            <paper-button raised primary>Login</paper-button>
+            <paper-button raised primary>Sign Up</paper-button>
+            
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+        <div style="text-align: center; margin: 30px 0px 20px 0px;">
+            <p class="small">
+                <a href="">Follow Us</a>
+                |
+                <a href="">Contact Us</a>
+                |
+                <a href="">Terms of Use</a>
+                <br />
+                <br />
+                &copy; Stacked
+            </p>
+        </div>
+    </div>
+
+
+
 </body>
--->
 </html>

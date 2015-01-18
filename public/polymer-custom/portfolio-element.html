@@ -5,18 +5,17 @@
 <polymer-element name="portfolio-element">
   <template>
 
-    This is <b>{{name}}</b>'s asdasdfas-tag element.
+    <b>{{name}}</b>
 
   <chart-line
-      width="400"
-      height="200"
+      width="500"
+      height="350"
       labels="['Monday','Tuesday','Wednesday','thursday','Friday','Saturday','Sunday']"
       values="[ [65,59,90,81,56,55,40], [28,48,40,19,96,27,100] ]"
       colors="['253,180,92','247,70,74','70,191,189','148,159,177','77,83,96']">
-  </chart-line>
-
+  </chart-line> 
     <core-ajax url="/api/bloom" auto method="GET" response="{{resp}}"></core-ajax>
-    <textarea value="{{resp}}"></textarea>
+<!--    <textarea value="{{resp}}"></textarea>-->
 
 
 
