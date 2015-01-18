@@ -1,142 +1,112 @@
 <!DOCTYPE html>
 <!-- saved from url=(0030)http://0.0.0.0:8080/index.html -->
-<html class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>template {display: none !important;} /* injected by platform.js */</style><style>body {transition: opacity ease-in 0.2s; } 
-body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
-</style>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
-    <!-- 1. Load platform support before any code that touches the DOM. -->
-    <script src="./index_files/webcomponents.min.js"></script>
-    <script src="./index_files/Chart.js"></script>
-
-    <!-- 2. Load the component using an HTML Import -->
-    <link rel="import" href="http://0.0.0.0:8080/polymer-custom/portfolio-element.html">
-
-
-    <link rel="stylesheet" href="http://0.0.0.0:8080/styles/main.css">
-    <link rel="stylesheet" href="http://0.0.0.0:8080/styles/style.css">
-    <link rel="stylesheet" href="http://0.0.0.0:8080/styles/polymerStyle.css">
-    <link href="./index_files/css" rel="stylesheet" type="text/css">
-    <link rel="import" href="http://0.0.0.0:8080/bower_components/paper-input/paper-input.html">
-    <link rel="import" href="http://0.0.0.0:8080/bower_components/paper-button/paper-button.html">
-    
-      
-      
-    <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
-html /deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
-[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
-html /deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
-[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
-html /deep/ [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
-[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
-html /deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
-[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
-html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
-[touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
-html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
-</style><style type="text/css"></style></head>
-    
-    <body touch-action="auto"><div id="StayFocusd-infobar" style="display:none;">
-    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
-    <span id="StayFocusd-infobar-msg"></span>
-    <span id="StayFocusd-infobar-links">
-        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a id="StayFocusd-infobar-hide">hide once</a>
-    </span>
-</div>
-    
-
-    <div id="content">
-        
-    <style shim-shadowdom="">
-        body{background-color:#D32F2F;}
-        .unselectable {
+<html class="no-js">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <style>template {display: none !important;} /* injected by platform.js */</style>
+      <style>body {transition: opacity ease-in 0.2s; } 
+         body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+      </style>
+      <meta charset="utf-8">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+      <!-- 1. Load platform support before any code that touches the DOM. -->
+      <script src="./index_files/webcomponents.min.js"></script>
+      <script src="./index_files/Chart.js"></script>
+      <!-- 2. Load the component using an HTML Import -->
+      <link rel="import" href="http://0.0.0.0:8080/polymer-custom/portfolio-element.html">
+      <link rel="stylesheet" href="http://0.0.0.0:8080/styles/main.css">
+      <link rel="stylesheet" href="http://0.0.0.0:8080/styles/style.css">
+      <link rel="stylesheet" href="http://0.0.0.0:8080/styles/polymerStyle.css">
+      <link href="./index_files/css" rel="stylesheet" type="text/css">
+      <link rel="import" href="http://0.0.0.0:8080/bower_components/paper-input/paper-input.html">
+      <link rel="import" href="http://0.0.0.0:8080/bower_components/paper-button/paper-button.html">
+      <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+         html /deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+         [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+         html /deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+         [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+         html /deep/ [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+         [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+         html /deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+         [touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+         html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+         [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+         html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+      </style>
+      <style type="text/css"></style>
+   </head>
+   <body touch-action="auto">
+      <div id="StayFocusd-infobar" style="display:none;">
+         <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+         <span id="StayFocusd-infobar-msg"></span>
+         <span id="StayFocusd-infobar-links">
+         <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+         <a id="StayFocusd-infobar-hide">hide once</a>
+         </span>
+      </div>
+      <div id="content">
+         <style shim-shadowdom="">
+            body{background-color:#D32F2F;}
+            .unselectable {
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             -o-user-select: none;
             user-select: none;
-        }
-
-        .no-tap-color {
+            }
+            .no-tap-color {
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             -webkit-touch-callout: none;
-        }
-
-        .mainBlock {
+            }
+            .mainBlock {
             padding: 20px;
-        }
-
-        .centered-panel {
+            }
+            .centered-panel {
             display: inline-block;
             margin: 0 auto;
             text-align: left;
-        }
-    </style>
-
-    <section hero="" id="heading">
-
-        <h2 class="" style="font-size:7em;">STACKED</h2>
-        <style shim-shadowdom="">
-            #heading .mainBlock {
-                width: 22em;
             }
-
-            #heading paper-input {
-                width: 100%;
-            }
-        </style>
-
-        <div class="mainBlock centered-panel">
-
-           <center> <h4 class="">Trade stocks in 7 seconds</h4></center>
-
-            <paper-input label="USERNAME..."></paper-input><br>
-
-            <paper-input floatinglabel="" label="EMAIL "></paper-input><br>
-
-            <br><br>
-
-            <paper-button raised="" primary="" role="button" tabindex="0">Login</paper-button>
-            <paper-button raised="" primary="" role="button" tabindex="0">Sign Up</paper-button>
-            
-
-
-        </div>
-
-    </section>
-
-
-
-
-
-        <div style="text-align: center; margin: 30px 0px 20px 0px;">
+         </style>
+         <section hero="" id="heading">
+            <h2 class="" style="font-size:7em;">STACKED</h2>
+            <style shim-shadowdom="">
+               #heading .mainBlock {
+               width: 22em;
+               }
+               #heading paper-input {
+               width: 100%;
+               }
+            </style>
+            <div class="mainBlock centered-panel">
+               <center>
+                  <h4 class="">Easily Get Started Trading Stocks </h4>
+               </center>
+               <paper-input floatinglabel label="USERNAME"></paper-input>
+               <br>
+               <paper-input floatinglabel label="EMAIL "></paper-input>
+               <br>
+               <br><br>
+               <paper-button raised="" primary="" role="button" tabindex="0">Login</paper-button>
+               <paper-button raised="" primary="" role="button" tabindex="0">Sign Up</paper-button>
+               <a href="portfolio.html"><paper-button raised="" primary="" role="button" tabindex="0">DEMO</paper-button></a>
+            </div>
+         </section>
+         <div style="text-align: center; margin: 30px 0px 20px 0px;">
             <p class="small">
-                <a href="">Follow Us</a>
-                |
-                <a href="">Contact Us</a>
-                |
-                <a href="">Terms of Use</a>
-                <br>
-                <br>
-                © Stacked
+               <a href="">Follow Us</a>
+               |
+               <a href="">Contact Us</a>
+               |
+               <a href="">Terms of Use</a>
+               <br>
+               <br>
+               © Stacked
             </p>
-        </div>
-    </div>
-
-
-
-  
-  <!-- POLYMBER -->
-
-
-  <portfolio-element security="IBM US Equity" width="400" height="300"></portfolio-element>
-
-
-
-
-<span class="_hsShareImage hsShareImage">&nbsp;</span></body></html>
+         </div>
+      </div>
+      <!-- POLYMBER -->
+      <span class="_hsShareImage hsShareImage">&nbsp;</span>
+   </body>
+</html>

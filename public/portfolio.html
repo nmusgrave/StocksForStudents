@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" 
+         content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+      <!-- 1. Load platform support before any code that touches the DOM. -->
+      <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+      <script src="bower_components/chartjs/Chart.js"></script>
+       <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-    <meta name="viewport" 
-    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
-    <!-- 1. Load platform support before any code that touches the DOM. -->
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <script src="bower_components/chartjs/Chart.js"></script>
-
-    <!-- 2. Load the component using an HTML Import -->
-    <link rel="import" href="elements.html">
-
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/style.css">
-<!--    <link rel="stylesheet" href="styles/polymerStyle.css">-->
-
-  </head>
-    
-    <style shim-shadowdom>
-        
-/*
-        body {
-         background: #fff;   
-         padding: 20px 0;
-            
-            
-        }
-        core-header-panel {
+      <!-- 2. Load the component using an HTML Import -->
+      <link rel="import" href="elements.html">
+      <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="styles/style.css">
+      <!--    <link rel="stylesheet" href="styles/polymerStyle.css">-->
+   </head>
+   <style shim-shadowdom>
+      /*
+      body {
+      background: #fff;   
+      padding: 20px 0;
+      }
+      core-header-panel {
       float: right;
       width: 360px;
       height: 400px;
       margin: 5px;
-    }
-    
-    core-header-panel[mode=cover]::shadow #mainContainer {
+      }
+      core-header-panel[mode=cover]::shadow #mainContainer {
       left: 70px;
-    }
-
-    .core-header {
+      }
+      .core-header {
       height: 60px;
       line-height: 60px;
       font-size: 18px;
@@ -49,318 +40,216 @@
       background-color: #D32F2F;
       color: #FFF;
       transition: height 0.2s;
-    }
-    
-    .core-header.tall {
+      }
+      .core-header.tall {
       height: 180px;
-    }
-    
-    .core-header.medium-tall {
+      }
+      .core-header.medium-tall {
       height: 120px;
-    }
-
-    .content {
+      }
+      .content {
       height: 2000px;
       background:  #B6B6B6;
       border: 1px solid #B6B6B6;
       z-index: 1;
-    }
-        
-    paper-fab {
+      }
+      paper-fab {
       color: #fff;
       margin-right:2em;
       margin-top: 28px;
-    }
-*/
-        
-        html, body {
-  background: #fafafa;
-  color: #F44336;
-  font-family: sans-serif;
-}
-
-#page {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-#toolbar {
-  display: block;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  background-color: #F44336;
-  padding: 0 16px;
-}
-
-#actions {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  height: 64px;
-  top: 0;
-  left: 0;
-  right 0;
-}
-
-#actions .icon {
-  padding: 7px;
-  margin: 2px;
-  vertical-align: middle;
-}
-
-#actions .spacer {
-  flex: 1;
-}
-
-#actions svg {
-  display: inline-block;
-  pointer-events: none;
-  position: relative;
-  vertical-align: middle;
-  width: 24px;
-  height: 24px;
-  fill: #fff;
-}
-
-#title {
-  padding: 21px;
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-}
-
-#content {
-  display: block;
-  position: relative;
-  padding: 24px;
-}
-
-.card {
-  display: block;
-  position: relative;
-  width: 30%;
-  height: 100%;
-  border: 1px solid #7a8e95;
-  -webkit-border-radius: 4px; 
-  -moz-border-radius: 4px;   
-  border-radius: 4px;
-  background-color: #fff;
-  margin: 76px auto;
-  margin-left: 60%;
-  padding: 24px;
-}
-        
-    .element {
-  width: 49%;                     /* poor approximation for old browsers    */
-  width: calc(50% - 8px);         /* standards-based answer for IE9+, FF16+ */
-  width: -moz-calc(50% - 8px);    /* support for FF4 - FF15                 */
-  width: -webkit-calc(50% - 8px); /* support for Chrome19+ and Safari6+     */
-}
-    </style>
-  <!-- POLYMBER -->
-<body unresolved>
-    
-    <div id="page">
-  <div id="toolbar" data-0="height:192px" data-128="height: 64px">
-    <div id="actions">
-      <div class="icon">
+      }
+      */
+      html, body {
+      background: #fafafa;
+      color: #F44336;
+      font-family: sans-serif;
+      }
+      #page {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      }
+      #toolbar {
+      display: block;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      background-color: #F44336;
+      padding: 0 16px;
+      }
+      #actions {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      height: 64px;
+      top: 0;
+      left: 0;
+      right 0;
+      }
+      #actions .icon {
+      padding: 7px;
+      margin: 2px;
+      vertical-align: middle;
+      }
+      #actions .spacer {
+      flex: 1;
+      }
+      #actions svg {
+      display: inline-block;
+      pointer-events: none;
+      position: relative;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+      }
+      #title {
+      padding: 21px;
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      }
+      #content {
+      display: block;
+      position: relative;
+      padding: 24px;
+      }
+      .card {
+      display: block;
+      position: relative;
+      width: 30%;
+      height: 100%;
+      border: 1px solid #7a8e95;
+      -webkit-border-radius: 4px; 
+      -moz-border-radius: 4px;   
+      border-radius: 4px;
+      background-color: #fff;
+      margin: 100px auto;
+      margin-left: 60%;
+      padding: 24px;
+      }
+      .element {
+      width: 49%;                     /* poor approximation for old browsers    */
+      width: calc(50% - 8px);         /* standards-based answer for IE9+, FF16+ */
+      width: -moz-calc(50% - 8px);    /* support for FF4 - FF15                 */
+      width: -webkit-calc(50% - 8px); /* support for Chrome19+ and Safari6+     */
+      }
+   </style>
+   <!-- POLYMBER -->
+   <body unresolved>
+      <div id="page">
+         <div id="toolbar" data-0="height:192px" data-128="height: 64px">
+            <div id="actions">
+               <div class="icon">
+               </div>
+               <div class="spacer"></div>
+              <a href="search.html"> <div class="icon">
+                  <svg viewBox="0 0 24 24" x="0px" y="0px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <g id="search">
+                        <path d="M15.5,14h-0.8l-0.3-0.3c1-1.1,1.6-2.6,1.6-4.2C16,5.9,13.1,3,9.5,3C5.9,3,3,5.9,3,9.5S5.9,16,9.5,16c1.6,0,3.1-0.6,4.2-1.6l0.3,0.3v0.8l5,5l1.5-1.5L15.5,14z M9.5,14C7,14,5,12,5,9.5S7,5,9.5,5C12,5,14,7,14,9.5S12,14,9.5,14z"></path>
+                     </g>
+                  </svg>
+               </div></a>
+               <div class="icon">
+                  <svg viewBox="0 0 24 24" x="0px" y="0px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <g id="more-vert">
+                        <path d="M12,8c1.1,0,2-0.9,2-2s-0.9-2-2-2c-1.1,0-2,0.9-2,2S10.9,8,12,8z M12,10c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,10,12,10z M12,16c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,16,12,16z"></path>
+                     </g>
+                  </svg>
+               </div>
+            </div>
+           <a href="index.html"> <div id="title" data-0="font-size: 48px; padding: 0 0 24px 12px;" data-128="font-size: 18px; padding: 0 0 21px 70px;">
+               STACKED
+               </div> </a>
+         </div>
+<!--          Polymer Card containing company information -->
+         <div id="content" data-0="padding-top: 230px;" data-192="padding-top: 250px;">
+            <br><br>
+            <div class="card paper-shadow-top-z-3">
+               <paper-button raised primary class="element" style="margin-top:-10px;" id="AAPL" onClick="reply_click(this.id)" >Apple</paper-button> 
+               <paper-button raised primary class="" style="margin-top:-10px;" onclick="javascript:alert('Please Confirm Purchase of 6.2 AAPL Stock')">Buy 6.2 Shares</paper-button>
+               <br>
+               <paper-button raised primary class="element" style="margin-top:10px;" id="XOM"onClick="reply_click(this.id)" >Exxon</paper-button>  
+               <paper-button raised primary class="" style="margin-top:10px;" onclick="javascript:alert('Please Confirm Purchase of 9.2 XOM Stock')">Buy 9.2 Shares</paper-button>
+               <br>
+               <paper-button raised primary class="element" style="margin-top:10px;"  id="MSFT" onClick="reply_click(this.id)">Microsoft</paper-button> 
+               <paper-button raised primary class="" style="margin-top:10px;" onclick="javascript:alert('Please Confirm Purchase of 3.2 MSFT Stock')">Buy 3.2 Shares</paper-button>
+               <br>
+               <paper-button raised primary class="element" style="margin-top:10px;"  id="GOOG" onClick="reply_click(this.id)">Google</paper-button> 
+               <paper-button raised primary class="" style="margin-top:10px;" onclick="javascript:alert('Please Confirm Purchase of 4.2 GOOG Stock')">Buy 4.2 Shares</paper-button>
+               <br>
+               <paper-button raised primary class="element" style="margin-top:10px;" id="GE" onClick="reply_click(this.id)">GE</paper-button> 
+               <paper-button raised primary class="" style="margin-top:10px;" onclick="javascript:alert('Please Confirm Purchase of 7.2 GE Stock')">Buy 7.2 Shares</paper-button>
+               <br>
+            </div>
+         </div>
       </div>
-      <div class="spacer"></div>
-      <div class="icon">
-      <svg viewBox="0 0 24 24" x="0px" y="0px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g id="search">
-            <path d="M15.5,14h-0.8l-0.3-0.3c1-1.1,1.6-2.6,1.6-4.2C16,5.9,13.1,3,9.5,3C5.9,3,3,5.9,3,9.5S5.9,16,9.5,16c1.6,0,3.1-0.6,4.2-1.6l0.3,0.3v0.8l5,5l1.5-1.5L15.5,14z M9.5,14C7,14,5,12,5,9.5S7,5,9.5,5C12,5,14,7,14,9.5S12,14,9.5,14z"></path>
-          </g>
-        </svg>
+       
+       
+<!--
+<company-looper></company-looper>
+<polymer-element name="company-looper">
+  <template>
+    <template repeat="{{elem, i in values}}">
+      <div>{{i}} - {{elem.id}}</div>
+    </template>
+  </template>
+    {{values[i].id}}
+  <script>
+
+    Polymer({
+      created: function() {
+        this.values = [
+            {id:"AAPL", equity:"Apple", shares:6.2},
+            {id:"XOM", equity:"Exxon", shares:6.2},
+            {id:"MSFT", equity:"Microsoft", shares:6.2}
+        ]
+      }
+    });
+  </script>
+</polymer-element>
+-->
+
+
+       <script>
+          
+//            var stock = document.getElementById('content').value;
+//            if (document.getElementById('stock1').onclick) {
+//                stock_value = document.getElementById('stock1').value;
+//            }
+//           console.log(stock_value);
+//           $(document).ready(function() {
+//                $("paper-button").click(function() {
+//                    alert(this.value);
+//                });
+//            });
+//           function f1(objButton){  
+//                alert("this is " + objButton.value);
+//            }
+//           
+           function reply_click(clicked_id){
+                alert(clicked_id);
+            }
+           
+//           var stockName = clicked_id; 
+//           document.write('<input type="hidden" name="ID" value="'+id+'"/>');
+//           document.write('<paper-button primary class="" style="margin-left:11%;">'+stockName+' Stock Trend</paper-button><br>');
+       </script>
+       
+       
+<!--       Rendered Chart with Company Information -->
+      <div style="margin-top: 10%;" cl>
+          <paper-button primary class="" style="margin-left:11%;">MSFT Stock Trend</paper-button><br>
+         <span style="margin-left: 8%;" class="">
+            <portfolio-element security="AAPL US Equity" width="500" height="400"></portfolio-element>
+         </span>
+
       </div>
-      <div class="icon">
-      <svg viewBox="0 0 24 24" x="0px" y="0px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g id="more-vert">
-            <path d="M12,8c1.1,0,2-0.9,2-2s-0.9-2-2-2c-1.1,0-2,0.9-2,2S10.9,8,12,8z M12,10c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,10,12,10z M12,16c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,16,12,16z"></path>
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div id="title" data-0="font-size: 48px; padding: 0 0 24px 12px;" data-128="font-size: 18px; padding: 0 0 21px 70px;">
-      STACKED
-    </div>
-  </div>
-
-  <div id="content" data-0="padding-top: 230px;" data-192="padding-top: 250px;">
-    <br><br>
-    <div class="card">
-        <paper-button raised primary class="element" style="margin-top:-10px;">MSFT</paper-button>
-        <paper-button raised primary class="" style="margin-top:-10px;">Buy 6.2 Shares</paper-button> <br>
-        <paper-button raised primary class="element" style="margin-top:10px;">MSFT</paper-button>
-        <paper-button raised primary class="" style="margin-top:10px;">Buy 6.2 Shares</paper-button> <br>
-        <paper-button raised primary class="element" style="margin-top:10px;">MSFT</paper-button>
-        <paper-button raised primary class="" style="margin-top:10px;">Buy 6.2 Shares</paper-button> <br>
-        <paper-button raised primary class="element" style="margin-top:10px;">MSFT</paper-button>
-        <paper-button raised primary class="" style="margin-top:10px;">Buy 6.2 Shares</paper-button> <br>
-        <paper-button raised primary class="element" style="margin-top:10px;">MSFT</paper-button>
-        <paper-button raised primary class="" style="margin-top:10px;">Buy 6.2 Shares</paper-button> <br>
-        
-    
-    </div>
-  </div>
-
-</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    <div style="margin-top: 10%;">
-        <span style="margin-left: 6%;">
-        <portfolio-element></portfolio-element>
-        </span>
-    
-    
-
-    <core-header-panel mode="scroll">
-    <div class="core-header">Stock Info</div>
-    <div class="content">
-        <stock-data></stock-data>
-        <div>
-        <a href="portfolio.html"><paper-button raised class="colored" >IBM Equity</paper-button></a>
-            <paper-fab icon="add" title="arrow-forward"></paper-fab><br>
-        <a href="portfolio.html"><paper-button raised class="colored" >IBM Equity</paper-button></a>
-            <paper-fab icon="add" title="arrow-forward"></paper-fab><br>
-            <a href="portfolio.html"><paper-button raised class="colored" >IBM Equity</paper-button></a>
-            <paper-fab icon="add" title="arrow-forward"></paper-fab><br>
-        </div>
-        
-    </div>
-  </core-header-panel>
-    </div>
-<!--
-    <section hero id="example6">
-
-        <h3>Your Stock Info</h3>
-
-
-
-        <style shim-shadowdom>
-            
-            body {
-                background-color: #7a8e95;
-            }
-
-            #example6 .card {
-                width: 320px;
-                height: 480px;
-                margin: 16px 12px;
-                border-radius: 3px solid white;
-            }
-
-            #example6 .toolbar {
-                position: relative;
-                padding: 0.5em;
-                border-radius: 3px 3px 0 0;
-            }
-
-            #example6 .inner {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                z-index: -3;
-            }
-
-            #example6 core-menu {
-                margin: 0px;
-            }
-
-        </style>
-
-        <bs-container>
-            <bs-row>
-                <bs-col mdpush="3" md="6" layout horizontal center-justified>
-
-                    <div class="card paper-shadow-top-z-1">
-                        <div class="inner paper-shadow-bottom-z-1"></div>
-                        <div layout horizontal class="toolbar paper-shadow-top-z-1">
-                        <div class="inner paper-shadow-bottom-z-1"></div>
-                            <paper-menu-button>
-                                <paper-icon-button icon="menu"></paper-icon-button>
-                                        <paper-item style="margin-bottom:5%;">Buy/Sell Options</paper-item>
-                            </paper-menu-button>
-                            <div flex></div>
-                            <paper-icon-button icon="search"></paper-icon-button>
-                            <paper-menu-button>
-                               
-                            </paper-menu-button>
-                        </div>
-                    </div>
-
-                </bs-col>
-            </bs-row>
-        </bs-container>
-    </section>
--->
-<!--
-    <core-heder-panel flex>
-        <core-toolbar>
-            <core-icon-button icon="menu">
-                <div>MY APP</div>
-            </core-icon-button>
-        </core-toolbar>
-        <div class = "content">
-            <portfolio-element></portfolio-element>
-        </div>
-    </core-heder-panel>
--->
-    
-    
-<!--
-    <core-toolbar class="medium-tall">
-
-      <paper-icon-button id="navicon"
-        icon="menu"></paper-icon-button>
-
-      <span flex>Title</span>
-
-      <paper-icon-button id="morebutton"
-        icon="more-vert"></paper-icon-button>
-
-      <paper-tabs class="bottom fit" selected="0">
-        <paper-tab>ONE</paper-tab>
-        <paper-tab>TWO</paper-tab>
-      </paper-tabs>
-
-    </core-toolbar>
--->
-    
-    
-<!--  <portfolio-element></portfolio-element>-->
-
-  
-
-</body>
-
-<script src="/components/webcomponentsjs/webcomponents.js"></script>
+<!--      Rendered Chart end -->    
+   </body>
 </html>
