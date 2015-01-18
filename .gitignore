@@ -1,5 +1,8 @@
 server/client.crt
 server/client.key
 server/bloomberg.crt
+client.crt
+client.key
+bloomberg.crt
 .DS_Store
 .brackets.json

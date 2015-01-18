@@ -1,0 +1,105 @@
+body {
+  font-size: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #4e5359;
+  background-color: #f3f3f5;
+}
+
+social-btn-container{
+	text-align:center;
+	margin:50px auto 0 auto;
+}
+.social-btn-container .social-btn-box{
+	display:inline-block;
+	width:40px;
+	height:40px;
+    font-size: .5em;
+
+	
+	border:1px solid #fff;
+
+	-webkit-border-radius:90%;
+	   -moz-border-radius:90%;
+	    -ms-border-radius:90%;
+	     -o-border-radius:90%;
+	        border-radius:90%;
+
+	margin:15px;
+	position:relative;
+	overflow:hidden;
+    
+}
+.social-btn-container .social-btn-box a{
+	color:#fff;
+	font-size:26px;
+	line-height:80px;
+	display:inline-block;
+	width:80px;
+	height:80px;
+	position:absolute;
+	top:-10px;
+	left:-10px;
+
+	
+}
+.social-btn-box,
+.social-btn-box a{
+	
+	-webkit-transition:all .25s;
+	   -moz-transition:all .25s;
+	    -ms-transition:all .25s;
+	     -o-transition:all .25s;
+	        transition:all .25s;
+}
+.social-btn-box:hover{
+	border-color:transparent;
+}
+.social-btn-box .facebook-btn:hover{
+	background:#3B5998;
+	color: #fff;
+}
+.social-btn-box .twitter-btn:hover{
+	background:#55ACEE;
+	color: #fff;
+}
+.social-btn-box .linkedin-btn:hover{
+	background:#0077b5;
+	color: #fff;
+}
+.social-btn-box .google-plus-btn:hover{
+	background:#db514f;
+	color: #fff;
+}
+.social-btn-box .youtube-btn:hover{
+	background:#cc181e;
+	color: #fff;
+}
+.social-btn-box .github-btn:hover{
+	background:#2b2e30;
+	color: #fff;
+}
+.social-btn-box .a:hover{
+	background:#3498db;
+	color: #fff;
+}
+
+#FAQ {
+	background: #2574A9;
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	color: white;
+}
+
+#FAQ p {
+	color: #e9e9e9;
+	font-size: 16px;
+}
+
+#FAQ h1 {
+	font-size: 200px;
+}
+
+#FAQ h3 {
+	margin-top: 10px;
+}
