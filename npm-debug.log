@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', 'app' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose publish [ 'app' ]
+5 verbose cache add [ 'app', null ]
+6 verbose cache add name=undefined spec="app" args=["app",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'app',
+7 verbose parsed url   path: 'app',
+7 verbose parsed url   href: 'app' }
+8 silly lockFile 7d104347-app app
+9 verbose lock app /Users/coven/.npm/7d104347-app.lock
+10 silly lockFile 7d104347-app app
+11 silly lockFile 7d104347-app app
+12 verbose addNamed [ 'app', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile cfc7e98a-app app@
+15 verbose lock app@ /Users/coven/.npm/cfc7e98a-app.lock
+16 silly addNameRange { name: 'app', range: '*', hasData: false }
+17 verbose request where is /app
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id d93aa522c0525bee
+20 verbose url raw /app
+21 verbose url resolving [ 'https://registry.npmjs.org/', './app' ]
+22 verbose url resolved https://registry.npmjs.org/app
+23 verbose request where is https://registry.npmjs.org/app
+24 info trying registry request attempt 1 at 11:29:35
+25 http GET https://registry.npmjs.org/app
+26 http 200 https://registry.npmjs.org/app
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Sun, 18 Jan 2015 16:29:35 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+27 silly registry.get     etag: '"AYLUD9GTVF4PMU2O100BT98MQ"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '3060',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-ord1724-ORD',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1421598575.765518,VS0,VE149',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'app', range: '*', hasData: true }
+29 silly addNameRange versions [ 'app', [ '0.1.0' ] ]
+30 verbose addNamed [ 'app', '0.1.0' ]
+31 verbose addNamed [ '0.1.0', '0.1.0' ]
+32 silly lockFile 0ddaab61-app-0-1-0 app@0.1.0
+33 verbose lock app@0.1.0 /Users/coven/.npm/0ddaab61-app-0-1-0.lock
+34 silly lockFile d3ccb295-stry-npmjs-org-app-app-0-1-0-tgz https://registry.npmjs.org/app/-/app-0.1.0.tgz
+35 verbose lock https://registry.npmjs.org/app/-/app-0.1.0.tgz /Users/coven/.npm/d3ccb295-stry-npmjs-org-app-app-0-1-0-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/app/-/app-0.1.0.tgz',
+36 verbose addRemoteTarball   '793e12f51f7cce0922c23165261543786a747fea' ]
+37 info retry fetch attempt 1 at 11:29:35
+38 verbose fetch to= /var/folders/jg/3rxmg9v56w9dzh5mr9c365wh0000gn/T/npm-44331-rr0nw5vQ/registry.npmjs.org/app/-/app-0.1.0.tgz
+39 http GET https://registry.npmjs.org/app/-/app-0.1.0.tgz
+40 http 200 https://registry.npmjs.org/app/-/app-0.1.0.tgz
+41 silly lockFile d3ccb295-stry-npmjs-org-app-app-0-1-0-tgz https://registry.npmjs.org/app/-/app-0.1.0.tgz
+42 silly lockFile d3ccb295-stry-npmjs-org-app-app-0-1-0-tgz https://registry.npmjs.org/app/-/app-0.1.0.tgz
+43 silly lockFile 0ddaab61-app-0-1-0 app@0.1.0
+44 silly lockFile 0ddaab61-app-0-1-0 app@0.1.0
+45 silly lockFile cfc7e98a-app app@
+46 silly lockFile cfc7e98a-app app@
+47 silly publish { name: 'app',
+47 silly publish   main: 'lib/index.js',
+47 silly publish   author: { name: 'Roland Poulter' },
+47 silly publish   version: '0.1.0',
+47 silly publish   keywords: [ 'micro', 'web', 'app' ],
+47 silly publish   homepage: 'https://github.com/rolandpoulter/app',
+47 silly publish   repository: { type: 'git', url: 'git://github.com/rolandpoulter/app.git' },
+47 silly publish   description: 'mirco web app framework',
+47 silly publish   contributors: [],
+47 silly publish   dependencies:
+47 silly publish    { cornerstone: 'x',
+47 silly publish      'app-client': 'x',
+47 silly publish      'uglify-js': 'x',
+47 silly publish      optimist: 'x',
+47 silly publish      mongoose: 'x',
+47 silly publish      connect: 'x',
+47 silly publish      mime: 'x' },
+47 silly publish   _npmUser: { name: 'rolandpoulter', email: 'rolandpoulter@gmail.com' },
+47 silly publish   _id: 'app@0.1.0',
+47 silly publish   devDependencies: {},
+47 silly publish   engines: { node: '*' },
+47 silly publish   _engineSupported: true,
+47 silly publish   _npmVersion: '1.0.106',
+47 silly publish   _nodeVersion: 'v0.6.2',
+47 silly publish   _defaultsLoaded: true,
+47 silly publish   dist:
+47 silly publish    { shasum: '793e12f51f7cce0922c23165261543786a747fea',
+47 silly publish      tarball: 'http://registry.npmjs.org/app/-/app-0.1.0.tgz' },
+47 silly publish   maintainers: [ { name: 'rolandpoulter', email: 'rolandpoulter@gmail.com' } ],
+47 silly publish   directories: {},
+47 silly publish   _shasum: '793e12f51f7cce0922c23165261543786a747fea',
+47 silly publish   _from: 'app@',
+47 silly publish   _resolved: 'https://registry.npmjs.org/app/-/app-0.1.0.tgz' }
+48 info prepublish app@0.1.0
+49 error need auth auth and email required for publishing
+49 error need auth You need to authorize this machine using `npm adduser`
+50 error System Darwin 14.0.0
+51 error command "node" "/usr/local/bin/npm" "publish" "app"
+52 error cwd /Users/coven/Desktop/CS/Github/PolymerBranch/StocksForStudents
+53 error node -v v0.10.32
+54 error npm -v 1.4.28
+55 error code ENEEDAUTH
+56 verbose exit [ 1, true ]
