@@ -13,6 +13,8 @@ server.listen(3000, function() {
 */
 app.get('/api/bloom', function(req, res) {
     bloomberg(function(data) {
+        console.log('here')
+        console.log(req)
         //console.log(data.data[0].securityData)
 
         data.data[0].securityData.fieldData.forEach(function(elem) {
