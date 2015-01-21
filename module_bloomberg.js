@@ -1,10 +1,10 @@
-module.exports = function(callback) {
+module.exports = function(security, callback) {
 
 var request = require('request')
 var fs = require('fs')
 
 var req = {
-        "securities": ["IBM US Equity"], // TODO- SELECT DIFF COMPANIES
+        "securities": [security], //["GOOG US Equity"], // TODO- SELECT DIFF COMPANIES
         "fields": ["PX_LAST", "OPEN", "EPS_ANNUALIZED"],
         "startDate" : "20150101", // TODO- SELECT DIFFERENT START TIME
         "periodicitySelection": "DAILY"

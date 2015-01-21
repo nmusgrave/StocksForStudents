@@ -1,0 +1,49 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="portfolio-element" attributes="security width height">
+  <template>
+
+<canvas id="myChart" width="{{width}}" height="{{height}}"></canvas>
+
+    <core-ajax url="/api/bloom/{{security}}" auto method="GET" response="{{resp}}" handleAs="json" on-core-response="{{handler}}"></core-ajax>
+
+  </template>
+  <script>
+    Polymer('portfolio-element', {
+      handler: function(event) {
+        var ce = this.$.myChart.getContext("2d");
+
+        var data = {
+            labels: event.detail.response.dates,
+            datasets: [
+                {
+                    label: "My First dataset",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: event.detail.response.buys
+                },
+                {
+                    label: "My Second dataset",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: event.detail.response.sells
+                }
+            ]
+        };
+
+        var myLineChart = new Chart(ce).Line(data);
+        myLineChart.update( );
+
+      }
+    })
+  </script>
+</polymer-element>

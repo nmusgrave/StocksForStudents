@@ -1,0 +1,28 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.1.2",
+  "description": "A sample Node.js app using Express 4",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.11.0"
+  },
+  "engines": {
+    "node": "0.10.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmusgrave/StocksForStudents"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "check-dependencies": "^0.8.2"
+  }
+}
