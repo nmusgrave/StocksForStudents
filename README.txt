@@ -1,7 +1,7 @@
-ng-seed
+Stocks for Students
 =======
-
-Bare-bones angular &amp; bootstrap web app
+Suggest stocks to invest in
+MHacks, winter 2015
 
 
 TO LAUNCH FRONT END
